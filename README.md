@@ -1,2 +1,2 @@
 # rose
-ROSE, an OS developed by Rust
+ROSE: an OS developed by Rust
