@@ -1,0 +1,14 @@
+#+Title:  ROSE: An OS developed in Rust!
+#+Author: Comcx
+#+Date:   <2020-10-09 Fri>
+
+
+* Introduction
+
+* Features
+- [-] Bare bone
+- [-] Basic interrupts [0/2]
+  - [X] Timer
+  - [-] Keyboard
+- [ ] Memory management
+  + [ ] Page
