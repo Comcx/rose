@@ -7,7 +7,7 @@
 
 * Features
 - [-] Bare bone
-- [-] Basic interrupts [0/2]
+- [-] Basic interrupts [1/2]
   - [X] Timer
   - [-] Keyboard
 - [ ] Memory management

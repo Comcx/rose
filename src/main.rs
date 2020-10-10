@@ -6,9 +6,10 @@
 
 use core::panic::PanicInfo;
 use rose::println;
+use bootloader::BootInfo;
 
 #[no_mangle]
-pub extern "C" fn _start() -> ! {
+pub extern "C" fn _start(boot_info: &'static BootInfo) -> ! {
     println!("Hello World{}", "!");
 
     rose::init();
@@ -29,7 +30,11 @@ pub extern "C" fn _start() -> ! {
         recur();
     }
     recur();
-    */
+     */
+
+    // Raise a page fault
+    //let ptr = 0xdeadbeaf as *mut u32;
+    //unsafe { *ptr = 42; }
 
     #[cfg(test)]
     test_main();

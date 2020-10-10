@@ -10,7 +10,7 @@ lazy_static! {
     /// Used by the `print!` and `println!` macros.
     pub static ref WRITER: Mutex<Writer> = Mutex::new(Writer {
         column_position: 0,
-        color_code: ColorCode::new(Color::Yellow, Color::Black),
+        color_code: ColorCode::new(Color::Cyan, Color::Black),
         buffer: unsafe { &mut *(0xb8000 as *mut Buffer) },
     });
 }
@@ -20,22 +20,22 @@ lazy_static! {
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
 pub enum Color {
-    Black = 0,
-    Blue = 1,
-    Green = 2,
-    Cyan = 3,
-    Red = 4,
-    Magenta = 5,
-    Brown = 6,
-    LightGray = 7,
-    DarkGray = 8,
-    LightBlue = 9,
+    Black      =  0,
+    Blue       =  1,
+    Green      =  2,
+    Cyan       =  3,
+    Red        =  4,
+    Magenta    =  5,
+    Brown      =  6,
+    LightGray  =  7,
+    DarkGray   =  8,
+    LightBlue  =  9,
     LightGreen = 10,
-    LightCyan = 11,
-    LightRed = 12,
-    Pink = 13,
-    Yellow = 14,
-    White = 15,
+    LightCyan  = 11,
+    LightRed   = 12,
+    Pink       = 13,
+    Yellow     = 14,
+    White      = 15,
 }
 
 /// A combination of a foreground and a background color.
